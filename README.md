@@ -1,2 +1,2 @@
-# COMP229_Portfolio_Project
-COMP 229 -- EJS with Node JS for portfolio
+# COMP229.006.F23
+ COMP229 Code Example
