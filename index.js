@@ -1,25 +1,32 @@
-const express = require('express');
-const router = express.Router();
-const path = require('path');
+var express = require('express'); //mount express and router before calling ejs files (html converted files)
+var router = express.Router();
 
-router.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname,'..','view','homepage.html'))
+/* GET home page. */
+router.get('/index', function(req, res, next) {
+  res.render('index');
 });
 
-router.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname,'..','view','services.html'))
+/*GET ABOUT ME PAGE */
+router.get('/about', function(req, res, next) {
+  res.render('about');
 });
 
-router.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname,'..','view','contact.html'))
+/*CONTACT ME */
+router.get('/contact', function(req, res, next) {
+  res.render('contact');
+ 
 });
 
-router.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname,'..','view','projects.html'))
+
+/*SERVICES */
+router.get('/services', function(req, res, next) {
+  res.render('services');
+ 
 });
 
-router.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname,'..','view','aboutme.html'))
+/*PROJECTS */
+router.get('/projects', function(req, res, next) {
+  res.render('projects');
+ 
 });
-
 module.exports = router;
